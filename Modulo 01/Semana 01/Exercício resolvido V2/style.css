@@ -15,7 +15,6 @@ body {
 }
 
 #cabecalho, #corpo, #roda-pe{
-    border: 5px solid black;
     margin: 10px;
 }
 
@@ -24,6 +23,29 @@ body {
     position: -webkit-sticky;
     position: sticky;
     top: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cabecalho ul, #logo img {
+    margin: 5px;
+}
+
+#cabecalho ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#menu li {
+    list-style: none;
+    margin: 5px;
+}
+
+.menu-op img {
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 }
 
 #corpo section {

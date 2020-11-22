@@ -9,7 +9,35 @@
     <body>
         <div id="pagina">
             <header id="cabecalho">
-                Cabeçalho
+                <picture id="logo">
+                    <source media="(max-width: 300px)" srcset="imagens/logo-senai-50px.png">
+                    <source media="(max-width: 500px)" srcset="imagens/logo-senai-100px.png">
+                    <source media="(max-width: 800px)" srcset="imagens/logo-senai-150px.png">
+                    <source media="(max-width: 1500px)" srcset="imagens/logo-senai-200px.png">
+                    <img src="imagens/logo-senai-300px.png" alt="SENAI">
+                </picture>
+                <ul id="menu">
+                    <li>
+                        <a>
+                            <picture class="menu-op">
+                                <source media="(max-width: 380px)" srcset="imagens/home-34px.png">
+                                <source media="(max-width: 650px)" srcset="imagens/home-50px.png">
+                                <source media="(max-width: 1500px)" srcset="imagens/home-150px.png">
+                                <img src="imagens/home-200px.png" alt="home">
+                            </picture>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <picture class="menu-op">
+                                <source media="(max-width: 380px)" srcset="imagens/album-34px.png">
+                                <source media="(max-width: 650px)" srcset="imagens/album-50px.png">
+                                <source media="(max-width: 1500px)" srcset="imagens/album-150px.png">
+                                <img src="imagens/album-200px.png" alt="album">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
             </header>
             <section id="corpo">
                 <header class="header-corpo">
