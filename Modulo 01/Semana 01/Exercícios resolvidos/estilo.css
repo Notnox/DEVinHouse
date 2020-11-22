@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+body {
+    background-color: yellow;
+    font-family: Verdana, sans-serif;
+}
+
+/* edição do menu */
+
+nav#menu {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 36.5%;
+}
+
+nav#menu ul {
+    list-style: none;
+}
+
+nav#menu li{
+    display: inline-block;
+    margin-left: 2px;
+}
+
+#botao-foto {
+    background-image: url("_imagens/album.jpg");
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 64px;
+    border-radius: 10px;
+}
+
+#botao-foto:hover {
+    background-image: url("_imagens/album-black.jpg");
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 64px;
+    border-radius: 10px;
+}
+
+#botao-home {
+    background-image: url("_imagens/home.jpg");
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 64px;
+    border-radius: 10px;
+}
+
+#botao-home:hover {
+    background-image: url("_imagens/home-black.jpg");
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 64px;
+    border-radius: 10px;
+}
+
+li.botao {
+    border: none;
+    float: right;
+}
+
+img.botao-foto {
+    border-radius: 10px;
+}
+
+#logo-senai {
+    display: block;
+    position: fixed;
+    top: -14px;
+    left: 3%;
+    width: 400px;
+    top: 30px;
+}
+
+#cabecalho {
+    margin-top: 120px;
+    border-bottom: 1px solid black;
+}
+
+/* edição do menu Fim*/
+
+/* edição corpo principal*/
+
+section#corpo-principal {
+    display: block;
+    background-color: rgba(255,255,255,.7);
+    width: 750px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* edição corpo principal fim*/
+
+/* edição roda-pe*/
+
+    footer#rodape {
+        text-align: center;
+        display: block;
+        background-color: rgba(255,255,255,.4);
+        border-radius: 30px;
+        margin: auto;
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    img.empresas {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+/* edição roda-pe fim*/
+
+h1 {
+    font-size: 20pt;
+    color: brown;
+    text-align: center;
+    background-image: url("_imagens/titulo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 10px;
+}
+
+h2{
+    font-size: 16pt;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 14pt;
+    text-align: justify;
+}
+
+input#fotos {
+    background-image: url("_imagens/album.jpg");
+    background-repeat: no-repeat;
+    height: 64px;
+    margin: 20px;
+}
+
+input#menu {
+    background-image: url("_imagens/home.jpg");
+    background-repeat: no-repeat;
+    height: 64px;
+    margin: 20px;
+}
+
+div#fotos {
+    display: inline-block;
+    padding-top: 1%;
+    padding-left: 3%;
+}
+
+#youtube {
+    padding-top: 20px;
+    text-align: center;
+}
+
+div#youtube p {
+    padding-left: 90px;
+    padding-right: 90px;
+    text-align: justify;
+}
