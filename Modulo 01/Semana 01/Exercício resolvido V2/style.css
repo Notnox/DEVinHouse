@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 32pt;
+    text-align: center;
+}
+
+#pagina {
+    background-color: rgba(255, 0, 0, .3);
+    width: 90%;
+    margin: auto;
+    border: 10px solid black;
+
+}
+
+#cabecalho, #corpo, #roda-pe{
+    border: 5px solid black;
+    margin: 10px;
+}
+
+#corpo section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header-corpo {
+    width: 100%;
+    
+}
+
+.article-corpo {
+    border: 2px solid black;
+    background-color: rgba(0, 255, 0, .7);
+    margin: 5px;
+    width: 30%;
+}
+
+@media (max-width: 2000px){
+
+    body {
+        font-size: 24pt;
+    }
+}
+
+@media (max-width: 1500px){
+
+    body {
+        font-size: 16pt;
+    }
+}
+
+@media (max-width: 800px){
+
+    body {
+        font-size: 12pt;
+    }
+
+    .article-corpo{
+        width: 45%;
+    }
+}
+
+@media (max-width: 500px){
+
+    body {
+        font-size: 9pt;
+    }
+
+    .article-corpo{
+        width: 100%;
+    }
+}
+}
