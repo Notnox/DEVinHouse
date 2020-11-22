@@ -19,6 +19,13 @@ body {
     margin: 10px;
 }
 
+#cabecalho {
+    background-color: rgba(0, 0, 255, .8);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+}
+
 #corpo section {
     display: flex;
     flex-direction: row;
@@ -28,7 +35,6 @@ body {
 
 .header-corpo {
     width: 100%;
-    
 }
 
 .article-corpo {
