@@ -8,10 +8,8 @@ body {
 }
 
 #pagina {
-    background-color: rgba(255, 0, 0, .3);
     width: 90%;
     margin: auto;
-    border: 10px solid black;
 }
 
 #cabecalho, #corpo, #roda-pe{
@@ -47,26 +45,43 @@ body {
 .menu-op img {
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
-    border: 2px solid black;
 }
 
 /* Edição do corpo */
-#corpo section {
+#corpo, #corpo section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.header-corpo {
-    width: 100%;
+.header-corpo{
+    background: url(imagens/titulo.png) no-repeat;
+    background-size: 100%;
+    opacity: .6;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 110px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 70%;
 }
+
 
 .article-corpo-index {
-    border: 2px solid black;
     background-color: rgba(0, 255, 0, .7);
     margin: 5px;
-    width: 100%;
+    width: 70%;
+    padding: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+h3 {
+    margin-top: 50px;
 }
 
 /* Edição roda-pé*/
@@ -109,10 +124,6 @@ body {
         font-size: 12pt;
     }
 
-    .article-corpo-imagem,
-    .article-corpo-index {
-        width: 45%;
-    }
 
     #roda-pe section {
         font-size: 8pt;
@@ -123,11 +134,6 @@ body {
 
     body {
         font-size: 9pt;
-    }
-
-    .article-corpo-imagem,
-    .article-corpo-index {
-        width: 100%;
     }
 
     #roda-pe section {
