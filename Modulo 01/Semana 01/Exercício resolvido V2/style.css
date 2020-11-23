@@ -62,11 +62,36 @@ body {
     width: 100%;
 }
 
-.article-corpo {
+.article-corpo-index {
     border: 2px solid black;
     background-color: rgba(0, 255, 0, .7);
     margin: 5px;
     width: 30%;
+}
+
+.article-corpo-imagem {
+    border: 2px solid black;
+    background-color: rgba(0, 255, 0, .7);
+    margin: 5px;
+    width: 30%;
+}
+
+.article-corpo-imagem:nth-child(1){
+    background-image: url('https://i.ibb.co/gv219WV/img03.jpg'); 
+    background-size: 100%;
+    height: 300px;
+}
+
+.article-corpo-imagem:nth-child(2){
+    background-image: url('img02.jpg'); 
+    background-size: 100%;
+    height: 300px;
+}
+
+.article-corpo-imagem:nth-child(3){
+    background-image: url('imagens/img01.jpg'); 
+    background-size: 100%;
+    height: 300px;
 }
 
 /* Edição roda-pé*/
@@ -109,7 +134,8 @@ body {
         font-size: 12pt;
     }
 
-    .article-corpo{
+    .article-corpo-imagem,
+    .article-corpo-index {
         width: 45%;
     }
 
@@ -124,11 +150,13 @@ body {
         font-size: 9pt;
     }
 
-    .article-corpo{
+    .article-corpo-imagem,
+    .article-corpo-index {
         width: 100%;
     }
 
     #roda-pe section {
         font-size: 5pt;
     }
+    
 }
