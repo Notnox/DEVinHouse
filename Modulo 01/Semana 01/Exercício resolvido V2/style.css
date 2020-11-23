@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* Edição geral */
 body {
     font-family: Arial, sans-serif;
     font-size: 32pt;
@@ -11,13 +12,13 @@ body {
     width: 90%;
     margin: auto;
     border: 10px solid black;
-
 }
 
 #cabecalho, #corpo, #roda-pe{
     margin: 10px;
 }
 
+/* Edição do cabeçalho */
 #cabecalho {
     background-color: rgba(0, 0, 255, .8);
     position: -webkit-sticky;
@@ -46,8 +47,10 @@ body {
 .menu-op img {
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    border: 2px solid black;
 }
 
+/* Edição do corpo */
 #corpo section {
     display: flex;
     flex-direction: row;
@@ -66,10 +69,26 @@ body {
     width: 30%;
 }
 
+/* Edição roda-pé*/
+#roda-pe {
+    background-color:rgba(125, 0, 125, .7);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.parceiros img {
+    margin: 10px 10px 5px 0;
+}
+
+/* responsivo */
 @media (max-width: 2000px){
 
     body {
         font-size: 24pt;
+    }
+
+    #roda-pe section {
+        font-size: 22pt;
     }
 }
 
@@ -77,6 +96,10 @@ body {
 
     body {
         font-size: 16pt;
+    }
+
+    #roda-pe section {
+        font-size: 11pt;
     }
 }
 
@@ -89,6 +112,10 @@ body {
     .article-corpo{
         width: 45%;
     }
+
+    #roda-pe section {
+        font-size: 8pt;
+    }
 }
 
 @media (max-width: 500px){
@@ -100,5 +127,8 @@ body {
     .article-corpo{
         width: 100%;
     }
-}
+
+    #roda-pe section {
+        font-size: 5pt;
+    }
 }
