@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe o seu nome</title>
+    <style>
+        body {
+            background-color: rgba(0, 170, 85, .2);
+            text-align: center;
+        }
+        h1 {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        button {
+            width: 100px;
+            height: 50px;
+            font-size: 9pt;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="vNome">Informe o seu nome, clicando no botão abaixo</h1>
+        </header>
+        <section>
+            <button onclick="informarNome()"><strong>Inserir nome</strong></button>
+        </section>
+    </main>
+    <script>
+        function informarNome() {
+            let nome = window.prompt('Informe o seu nome:')
+            let h1 = window.document.querySelector('h1#vNome')
+            
+            window.alert(`O seu nome é ${nome}.`)
+            h1.innerHTML = `Bem vindo ${nome}.`            
+        }
+    </script>
+</body>
+</html>
