@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule sua idade</title>
+    <style>
+        body{
+            background-color: rgba(24, 12, 80, .6);
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgb(125, 125, 158);
+            border-radius: 10px;
+            margin: auto;
+            width: 800px;
+            height: 500px;
+            font-family: verdana, sans-serif;
+        }
+
+        p {
+            font-size: 16pt;
+        }
+
+        input {
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Preencha os campos abaixo!</h1>
+        </header>
+        <section>
+            <p><label for="data">Insira sua data de nascimento</label></p>
+            <p>
+                <input type="date" id="data">
+                <input type="button" value="Calcular idade" onclick="calcularIdade()">
+            </p>
+            <p id="msg"></p>
+        </section>
+    </main>
+    <footer>
+        <h5>Esse programa foi desenvolvido para funcionar no Chrome!</h5>
+    </footer>
+    <script>
+        function calcularIdade() {
+            let data = window.document.querySelector('input#data')
+
+            if (data.value == ""){
+                window.alert('Informe uma data!')
+            } else{
+                let anoatual = new Date().getFullYear()
+                let anodata = data.value.split('-')[0]
+                let idade = anoatual - anodata
+                let msg = window.document.querySelector('p#msg')
+
+                if (idade == 0){
+                    msg.innerHTML = "Você acabou de nascer, parabéns!"
+                }
+                else if (idade == 1) {
+                    msg.innerHTML = "Você possui 1 ano de idade!"
+                } else {
+                    msg.innerHTML = `Você possui ${idade} anos de idade!`
+                }
+            }
+        }
+    </script>
+</body>
+</html>
