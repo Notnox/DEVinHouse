@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora Agora</title>
+    <style>
+        body {
+            background-color: rgba(255, 0, 255, .4);
+            font-family: sans-serif;
+            text-align: center;
+        }
+        main {
+            background-color:salmon;
+            width: 30%;
+            height: 30%;
+            margin: auto;
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1 id="relogio"></h1>
+        </section>
+    </main>
+    <script>
+        let relogio = window.document.querySelector('h1#relogio')
+        let data = new Date()
+        let tempo = `${data.getHours()}:${data.getMinutes()}`
+
+        relogio.innerHTML = `O horário atual é: ${tempo}`
+    </script>
+</body>
+</html>
