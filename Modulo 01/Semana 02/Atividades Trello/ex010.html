@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de número</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        header {
+            margin-top: 3%;
+        }
+        main {
+            background-color: rgba(106, 90, 250, .5);
+            width: 30%;
+            margin: auto;
+            margin-top: 2%;
+            border-radius: 20px;
+            box-shadow: 2px 5px 5px black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+        }
+        table th{
+            padding-bottom: 10px;
+        }
+        #titulo {
+            font-size: 16pt;
+        }
+        #numero {
+            width: 60%;
+            height: 50px;
+            text-align: center;
+            font-size: 18pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Informe um valor e veja se é par ou impar</h1>
+    </header>
+    <main>
+        <table>
+            <tr>
+                <th id="titulo">Informe um número</th>
+            </tr>
+            <tr>
+                <th><input type="number" onkeyup="comparar()" id="numero"></th>
+            </tr>
+        </table>
+        <h2 id="msg"></h2>
+    </main>
+    <script>
+        function comparar(){
+            let objnum = window.document.querySelector('input#numero')
+            let msg = window.document.querySelector('h2#msg')
+
+            if (objnum.value != ''){
+                let num = Number(objnum.value)
+
+                if (num % 2 == 0) {
+                    msg.innerHTML = `O número ${num} é PAR!`
+                } else {
+                    msg.innerHTML = `O número ${num} é IMPAR!`
+                }
+                if (num == 0) {
+                    msg.innerHTML = `0 par ou impar? I agora &#129300;`
+                }
+            } else {
+                msg.innerHTML = ''
+            }
+
+        }
+    </script>
+</body>
+</html>
