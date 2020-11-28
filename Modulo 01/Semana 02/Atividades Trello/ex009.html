@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples</title>
+    <style>
+        body {
+            background-color: rgba(242, 242, 242, .9);
+            font-family: sans-serif;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(250, 250, 250);
+            width: 35%;
+            margin: auto;
+            border: 2px solid black;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+            margin-top: 3%;
+        }
+        header {
+            margin-top: 3%;
+        }
+        button {
+            font-size: 20pt;
+            width: 50px;
+            height: 50px;
+            margin: 20px;
+        }
+        .inumero {
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            font-size: 15pt;
+        }
+        #tresultado {
+            width: 100%;
+        }
+        #iresultado {
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            font-size: 15pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculadora Simples!</h1>
+    </header>
+    <main>
+        <section>
+            <table>
+                <tr>
+                    <th>Prímeiro número</th>
+                    <th>Segundo número</th>
+                </tr>
+                <tr>
+                    <th><input type="number" class="inumero" id="ent1"></th>
+                    <th><input type="number" class="inumero" id="ent2"></th>
+                </tr>
+            </table>
+            <div>
+                <button onclick="calcular(1)">+</button>
+                <button onclick="calcular(2)">-</button>
+                <button onclick="calcular(3)">/</button>
+                <button onclick="calcular(4)">*</button>
+            </div>
+            <table id="tresultado">
+                <tr>
+                    <th colspan="2">Resultado</th>
+                </tr>
+                <tr>
+                    <th ><input type="text" id="iresultado" readonly></th>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <script>
+        function calcular(operador) {
+            let entrada1 = window.document.querySelector('input#ent1')
+            let entrada2 = window.document.querySelector('input#ent2')
+
+            if (entrada1.value != "" && entrada2.value != ""){
+                let resultado = window.document.querySelector('input#iresultado')
+                let res = ''
+
+                switch (operador){
+                    case 1:
+                        res = Number(entrada1.value) + Number(entrada2.value)
+                        break
+                    case 2:
+                        res = Number(entrada1.value) - Number(entrada2.value)
+                        break
+                    case 3:
+                        res = Number(entrada1.value) / Number(entrada2.value)
+                        break
+                    case 4:
+                        res = Number(entrada1.value) * Number(entrada2.value)
+                        break
+                }
+                resultado.value = `${res}`
+                entrada1.value = ''
+                entrada2.value = ''
+            } else {
+                alert('[ERRO] Favor preencher os dois campos antes de solicitar uma operação!')
+            }
+        }
+    </script>
+</body>
+</html>
