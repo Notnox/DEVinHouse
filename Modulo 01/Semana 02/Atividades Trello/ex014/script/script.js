@@ -1,4 +1,6 @@
-localStorage.clear()
+let cursos = []
+localStorage["cursos"] = JSON.stringify(cursos)
+
 var cursosOfertado = [9]
 cursosOfertado[0] = "HTML5"
 cursosOfertado[1] = "CSS3"
@@ -12,7 +14,7 @@ cursosOfertado[8] = "PHP"
 cursosOfertado[9] = "React"
 
 function adicionarBotao(opcao){
-    
+
     if (opcao == undefined){
         var cursoBusca = window.document.querySelector('input#buscar')
         var lista = window.document.querySelector('select#carrinho')
@@ -48,54 +50,22 @@ function adicionarBotao(opcao){
     }
 }
 
-//DAQUI PARA BAIXO, EU NÃO ME ORGULHO NEM UM POUCO
-
 function verificarConflito(stg){
-    if (localStorage.curso0 == stg){
-        return false
-    } else if (localStorage.curso1 == stg){
-        return false
-    } else if (localStorage.curso2 == stg){
-        return false
-    } else if (localStorage.curso3 == stg){
-        return false
-    } else if (localStorage.curso4 == stg){
-        return false
-    } else if (localStorage.curso5 == stg){
-        return false
-    } else if (localStorage.curso6 == stg){
-        return false
-    } else if (localStorage.curso7 == stg){
-        return false
-    } else if (localStorage.curso8 == stg){
-        return false
-    } else if (localStorage.curso9 == stg){
-        return false
-    } else {
-        return true
+    let lscursos = JSON.parse(localStorage['cursos'])
+    for (let n in lscursos){
+        if (lscursos[n] == stg){
+            return false
+        }
     }
+    return true
 }
 
 function adicionarNoStore(stg){
-    if (localStorage.curso0 == undefined){
-        localStorage.setItem('curso0',stg)
-    } else if (localStorage.curso1 == undefined){
-        localStorage.setItem('curso1',stg)
-    } else if (localStorage.curso2 == undefined){
-        localStorage.setItem('curso2',stg)
-    } else if (localStorage.curso3 == undefined){
-        localStorage.setItem('curso3',stg)
-    } else if (localStorage.curso4 == undefined){
-        localStorage.setItem('curso4',stg)
-    } else if (localStorage.curso5 == undefined){
-        localStorage.setItem('curso5',stg)
-    } else if (localStorage.curso6 == undefined){
-        localStorage.setItem('curso6',stg)
-    } else if (localStorage.curso7 == undefined){
-        localStorage.setItem('curso7',stg)
-    } else if (localStorage.curso8 == undefined){
-        localStorage.setItem('curso8',stg)
-    } else if (localStorage.curso9 == undefined){
-        localStorage.setItem('curso9',stg)
+    let cursos = []
+    let lscursos = JSON.parse(localStorage['cursos'])
+    for (let n in lscursos){
+        cursos.push(lscursos[n])
     }
+    cursos.push(stg)
+    localStorage["cursos"] = JSON.stringify(cursos)
 }
