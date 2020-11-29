@@ -1,0 +1,38 @@
+main {
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 26pt;
+    border: 5px solid rgba(0, 0, 0, .7);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .7);
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-size: 12pt;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+section {
+    background-color: rgba(255, 255, 255, .7);
+    padding: 20px;
+    border-radius: 20px;
+}
