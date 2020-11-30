@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de PA e PG</title>
+        <style>
+            body {
+                background-color: pink;
+                font-family: sans-serif;
+                text-align: center;
+            }
+            h1{
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            main {
+                background-color: plum; 
+                width: 40%;   
+                margin: auto;    
+                padding: 25px;    
+                box-shadow: 2px 5px 10px black;    
+            }
+            section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            input {
+                width: 40%;
+                height: 30px;
+                font-size: 14pt;
+                margin-bottom: 30px;
+            }
+            button{
+                font-size: 16pt;
+            }
+            p {
+                font-size: 14pt;
+                width: 100%;                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Preencha os campos abaixo e escolha como deverá ser o calculo!</h1>
+        </header>
+        <main>
+            <section>
+                <label for="num"><strong>Valor ínicial</strong></label>
+                <input type="number" id="num" placeholder="Insira o número aqui!">
+                <label for="raiz"><strong>Raiz</strong></label>
+                <input type="number" id="raiz" placeholder="Insira a raiz aqui!">
+                <div>
+                    <button onclick="calcularPA()">Calcular P.A</button>
+                    <button onclick="calcularPG()">Calcular P.G</button>
+                </div>
+                <p id="msg"></p>
+            </section>
+            <script>
+                var valorInicial = window.document.querySelector('input#num')
+                var raiz = window.document.querySelector('input#raiz')
+                var msg = window.document.querySelector('p#msg')
+
+                function calcularPA(){
+                    if (valorInicial.value != '' && raiz.value != ''){
+                        let numRaiz = Number(raiz.value)
+                        let texto = Number(valorInicial.value)
+                        let passos = 1
+                        msg.innerHTML = ''
+                        
+                        for (let n = texto; passos < 11; n += numRaiz){
+                            msg.innerHTML += ` ${n}`
+                            passos++
+                        }
+                    } else {
+                        window.alert('[ERRO] É necessário que você preencha os dois campos!')
+                    }
+                }
+
+                function calcularPG(){
+                    if (valorInicial.value != '' && raiz.value != ''){
+                        let numRaiz = Number(raiz.value)
+                        let texto = Number(valorInicial.value)
+                        let passos = 1
+                        msg.innerHTML = ''
+
+                        for (let n = texto; passos < 11; n *= numRaiz){
+                            msg.innerHTML += ` ${n}`
+                            passos++
+                        }
+                    } else {
+                        window.alert('[ERRO] É necessário que você preencha os dois campos!')
+                    }
+                }
+            </script>
+        </main>
+    </body>
+</html>
