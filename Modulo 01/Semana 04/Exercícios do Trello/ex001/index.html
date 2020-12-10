@@ -4,12 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <title>VAR x LET</title>
+        <title>Calcule sua média</title>
     </head>
     <body>
         <h1>Olá Mundo</h1>
         <section>
-     
+            <label for="iNota">Informe sua nota</label>
+            <div>
+                <input type="number" placeholder="Informe a nota aqui!" min="0" max="10" id="iNota">
+                <button onclick="somar()">+</button>
+            </div>
+            <p id="notas"></p>
+            <button onclick="calcular()">Calcular</button>
+            <p id="media"></p>
         </section>
         <footer>
             Trabalho desenvolvido por LucasPires <br>
