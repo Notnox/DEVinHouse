@@ -6,18 +6,9 @@ const registro = [
 ]
 
 function verificar(){
+    const menorArray = registro.filter(elem => elem.idade < 18)
 
-    const nomesArray = registro.map((pessoa) => {
-        if (pessoa.idade <= 18) {
-            return pessoa.nome
-        } else {
-            return 'maior'
-        }
-    })
-
-    nomesArray.forEach((nomes) => {
-        if (nomes != 'maior') {
-            msg.innerHTML = nomes + ' ' + msg.innerHTML
-        }
+    menorArray.forEach((nomes) => {
+        msg.innerHTML = nomes.nome + ' ' + msg.innerHTML
     })
 }
